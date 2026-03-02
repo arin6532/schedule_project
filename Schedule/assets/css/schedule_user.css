@@ -1,0 +1,41 @@
+/* กำหนดความกว้างและความสูงของการ์ด */
+.card-form-schedule {
+  width: 100%; /* ปรับให้ขนาดเต็มความกว้างของพื้นที่ */
+  max-width: 800px; /* กำหนดขนาดสูงสุดเพื่อไม่ให้การ์ดกว้างเกินไป */
+  height: auto; /* ปรับให้สูงเพียงพอสำหรับเนื้อหาภายใน */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: absolute;
+  top: 53%; /* ย้ายไปอยู่ตรงกลางแนวตั้ง */
+  left: 50%;
+  transform: translate(-50%, -50%); /* ย้ายไปอยู่ตรงกลางแนวนอนและแนวตั้ง */
+}
+
+/* กำหนดขนาดรูปในฟอร์ม */
+.profile-image {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ปรับขนาดปุ่มสำหรับอุปกรณ์เล็ก */
+input[type=file]::file-selector-button {
+  padding: 5px 30px; /* ปรับขนาดของปุ่มสำหรับอุปกรณ์เล็ก */
+}
+
+/* เพิ่ม Media Queries เพื่อปรับแต่งสไตล์สำหรับอุปกรณ์เล็ก */
+@media (max-width: 768px) {
+  .card-form-schedule {
+      width: 90%; /* ปรับความกว้างให้พอดีกับหน้าจอของมือถือและแท็บเล็ต */
+      max-width: none;
+      padding: 15px; /* ลดขนาดของ padding สำหรับอุปกรณ์เล็ก */
+  }
+
+  /* ปรับขนาดรูปภาพในอุปกรณ์เล็ก */
+  .profile-image {
+      width: 80px;
+      height: 80px;
+  }
+}

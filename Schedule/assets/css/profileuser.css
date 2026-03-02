@@ -1,0 +1,57 @@
+/* กำหนดความกว้างและความสูงของการ์ด */
+.card-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-form {
+    width: 100%; /* ปรับให้ขนาดเต็มความกว้างของพื้นที่ */
+    max-width: 600px; /* กำหนดขนาดสูงสุดเพื่อไม่ให้การ์ดกว้างเกินไป */
+    height: auto; /* ปรับให้สูงเพียงพอสำหรับเนื้อหาภายใน */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%; /* ย้ายไปอยู่ตรงกลางแนวตั้ง */
+    left: 50%;
+    transform: translate(-50%, -50%); /* ย้ายไปอยู่ตรงกลางแนวนอนและแนวตั้ง */
+}
+
+/* กำหนดขนาดรูปในฟอร์ม */
+.profile-image {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+input[type=file]::file-selector-button {
+    margin-right: 30px;
+    border: none;
+    background: #084cdf;
+    padding: 5px 20px; /* ปรับขนาดปุ่มให้สัมพันธ์กับขนาดการ์ด */
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+    background: #0d45a5;
+}
+
+/* เพิ่ม Media Queries เพื่อปรับแต่งสไตล์สำหรับอุปกรณ์เล็ก */
+@media (max-width: 768px) {
+    .card-form {
+        padding: 15px; /* ปรับขนาด padding สำหรับอุปกรณ์เล็ก */
+    }
+    
+    .profile-image {
+        width: 80px; /* ลดขนาดรูปภาพในอุปกรณ์เล็ก */
+        height: 80px;
+    }
+}
