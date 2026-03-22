@@ -43,13 +43,13 @@ if (isset($_POST['name']) && isset($_POST['date']) && isset($_POST['header']) &&
             // Create a new PHPMailer object for each friend
             $mail = new PHPMailer();
             
-            // Configure SMTP settings
+            // SMTP Configuration
             $mail->isSMTP();
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
-            $mail->Username = "hunzk26124409@gmail.com"; // Replace with your Gmail email address
-            $mail->Password = "bdufsyaqwghfghcd"; // Replace with your Gmail password
-            $mail->Port = 587;
+            $mail->Username = "your_Email";
+            $mail->Password = "your_key";    
+            $mail->Port = 587;         
             $mail->SMTPSecure = "tls";
 
             // Email settings

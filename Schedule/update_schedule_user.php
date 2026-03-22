@@ -114,13 +114,13 @@ if (mysqli_query($con, $query)) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; // Update SMTP server as needed
         $mail->SMTPAuth = true;
-        $mail->Username = 'hunzk26124409@gmail.com'; // Your email address
-        $mail->Password = 'bdufsyaqwghfghcd'; // Your email password
+        $mail->Username = 'your_email'; // Your email address
+        $mail->Password = 'your_key'; // Your email password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use ENCRYPTION_SMTPS if required
         $mail->Port = 587; // Update port as needed
         
         // Email sender information
-        $mail->setFrom('hunzk26124409@gmail.com', 'Schedule.com'); // Your name and email address
+        $mail->setFrom('your_email', 'Schedule.com'); // Your name and email address
         
         // Email body settings
         $mail->isHTML(true);
