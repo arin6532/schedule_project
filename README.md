@@ -2,6 +2,13 @@
 
 A web-based schedule management application developed using PHP and MySQL (XAMPP environment).
 
+## Live Demo
+http://arinschedule.infinityfreeapp.com
+
+## Responsive Notice
+This application is currently optimized for desktop usage.
+Some features or layouts may not display correctly on mobile devices. 
+
 ## ✨ Features
 
 - User registration and login system
